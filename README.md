@@ -6,9 +6,9 @@ I'm interested in building AI systems for robotics and computer vision. My curre
 
 ### Robot wake-word detection · In progress
 
-I prototyped two wake-word detection paths and built a state-aware voice event node. The project includes a runnable event simulation and offline results showing where wake-word detection still needs work.
+I prototyped two wake-word detection paths and built a state-aware voice event node. The project includes a runnable event simulation and a tool for testing wake-word detection on labeled recordings.
 
-[Try the simulation and see the results](projects/robot-wake-word/README.md)
+[Try the simulation and see how I test wake words](projects/robot-wake-word/README.md)
 
 ### Tiny-ImageNet classification
 

@@ -22,16 +22,8 @@ STOP
 
 The node emits `WAKE`, `CONFIRM`, and `STOP_REQUEST` as JSON. The simulation exercises event handling with typed keywords. A stop request is an application event. The robot's physical emergency stop is independent.
 
-## Offline evaluation
+## Wake-word testing
 
-I replayed the same WAV clips through both detectors, then ran a separate focused threshold test for “Hey Nailong”. The [threshold script](test_nailong.py) evaluates a supplied openWakeWord ONNX model against labeled 16 kHz mono WAV files.
+“Hi Milk Dragon” triggered openWakeWord during prototype testing. I also explored bilingual keyword spotting with sherpa-onnx and built a [threshold test script](test_nailong.py) to replay labeled WAV clips and check missed and unintended activations for “Hey Nailong”.
 
-| Evaluation | openWakeWord | sherpa-onnx |
-| --- | ---: | ---: |
-| “Hi Milk Dragon”, 4 clips across two pilot batches | 2/4 at threshold 0.35 | 1/4 with the prototype keyword configuration |
-| “Hey Nailong”, 4 clips across the same pilot batches | 0/4 at threshold 0.35 | 0/4 |
-| Background clips in the pilot batches | 0/4 triggered | 0/4 triggered |
-
-In a separate 20-clip Nailong test, openWakeWord detected **0/10** positives at **0.20** and **4/10** at **0.02**. Neither setting triggered on the 10 negative clips. These small offline trials helped identify missed detections as the immediate issue. Live response time and false activations during continuous operation still need to be measured.
-
-The next experiment will fix the microphone and distance, compare “奶龙” with “Hey Nailong”, and test the chosen configuration on fresh recordings and continuous background speech.
+Current work focuses on improving Nailong detection and measuring wake-to-response time and false activations on the robot in continuous use.
