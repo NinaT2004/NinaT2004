@@ -4,15 +4,17 @@ I'm interested in building AI systems for robotics and computer vision. My curre
 
 ## Selected projects
 
+### Robot wake-word detection · In progress
+
+I prototyped two wake-word detection paths and built a state-aware voice event node. The project includes a runnable event simulation and offline results showing where wake-word detection still needs work.
+
+[Try the simulation and see the results](projects/robot-wake-word/README.md)
+
 ### Tiny-ImageNet classification
 
 I compared training from scratch, transfer learning, and fine-tuning on a 200-class image classification task. Fine-tuning VGG16 raised held-out accuracy from **27.1% to 54.5%**. ResNet18 reached **50.3%** with shorter training time per epoch.
 
 [Read the experiment and results](projects/tiny-imagenet/README.md)
-
-### Robot wake-word detection · In progress
-
-I'm working on wake-word detection as a way to initiate voice interaction with a robot.
 
 ### Image representation and denoising
 
